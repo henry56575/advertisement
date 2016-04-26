@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Basic Demo</title>
+	<link rel="stylesheet" type="text/css" href="css/basic.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+    <ul class="nav nav-tabs">
+	    <li class="active"><a href="#">视频上传</a></li>
+	 	<li><a href="index_show.html">Tags展示</a></li>
+	</ul>
+	<div class="container">
+		<div id="header">
+			<h2 class="text-muted">视频上传</h2>
+		</div>
+		<div id="middle">	
+				<form method="post" action="http://10.58.231.192/upload.php" enctype="multipart/form-data">
+					<label>选择视频: <input type="file" name="userfile" id="userfile" />
+					</label>
+				<br>
+				<br>
+				<div class="form-group">	
+				  <div class="row">
+					  <div class="col-md-4">
+					  </div>
+					  <div class="col-md-4">
+					  	<label class="control-label">Tag 01</label>
+					  	<input name="tag[]" id="txt1" type="text" class="form-control" placeholder="请输入Tag 01" >
+					  </div>
+				  </div>
+				  <br>
+				  <div class="row">
+					  <div class="col-md-4">
+					  </div>
+					  <div class="col-md-4">
+					  	<label class="control-label">Tag 02</label>
+					  	<input name="tag[]" id="txt2" type="text" class="form-control" placeholder="请输入Tag 02" >
+					  </div>
+				  </div>
+				  <br>
+				  <div class="row">
+					  <div class="col-md-4">
+					  </div>
+					  <div class="col-md-4">
+					  	<label class="control-label">Tag 03</label>
+					  	<input name="tag[]" id="txt3" type="text" class="form-control" placeholder="请输入Tag 03" >
+					  </div>
+				  </div>
+				  <br>
+				  <br>
+				  <div class="row">
+				  	<div class="col-md-4">
+					</div>
+				    <div class="col-md-4">
+				  	  <input  type="submit" class="btn btn-primary" value="上传">
+                    </div>
+				</div>
+				</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		localStorage.a=$("#txt1")[0].value;
+		localStorage.b=$("#txt2")[0].value;
+		localStorage.c=$("#txt3")[0].value;
+	</script>
+	</body>
+</html>
